@@ -34,12 +34,12 @@
 		if(eregi("302", $ver)){
 			print "\n";
 			print "--------------------------------------------------------------------------------------------------------\n";
-			echo "| Cracked : " . "Host : " . " | " . $host . " User : "  . $user . " | " . " Pass : "  . $word .  "\n";
+			echo "| Cracked: " . "Host: " . " | " . $host . " Usuario: "  . $user . " | " . " Senha: "  . $word .  "\n";
 			print "--------------------------------------------------------------------------------------------------------\n";
 			print "\n";
 			exit;
 		}else{
-			echo "NOT Cracked | " . "Host : " . " | " . $host . " User : "  . $user . " | " . " Pass : "  . $word .  "\n";
+			echo "NOT Cracked | " . "Host: " . " | " . $host . " Usuario: "  . $user . " | " . " Senha: "  . $word .  "\n";
 		}
 	}
 
