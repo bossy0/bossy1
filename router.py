@@ -47,7 +47,7 @@ def usage():
 
 def bruteforce(target,passlist,username):
     #Abre a passlist
-    fd = open(passlist, 'rw')
+    fd = open(passlist.txt, 'rw')
     passwords = fd.readlines()
     i = 0
     print ""
