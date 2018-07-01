@@ -286,7 +286,7 @@ def check_avalaible_proxys(proxys):
             t.join()
         queuelock.release()
 
-    print(bcolors.OKGREEN + "[+] Online Proxy: " + bcolors.BOLD + str(len(proxys_working_list)) + bcolors.ENDC + "\n")
+    print(bcolors.OKGREEN + "[+] Online Proxy : " + bcolors.BOLD + str(len(proxys_working_list)) + bcolors.ENDC + "\n")
 
 
 if __name__ == "__main__":
