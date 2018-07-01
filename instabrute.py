@@ -250,7 +250,8 @@ def starter():
             if found_flag:
                 break
         print(bcolors.OKGREEN + "\n--------------------")
-        print("[!] Brute complete !" + bcolors.ENDC)
+        print("[!] Brute Complete !" + bcolors.ENDC)
+        print(bcolors.OKGREEN + "\n--------------------")
 
     except Exception as err:
         print(err)
