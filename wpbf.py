@@ -66,7 +66,7 @@ else:
         urls = open("hosts.txt", "r").readlines()
         threads = []
 
-        for pwd in ["123", "mudarsenha","1234", "123mudar","t","q","pass123","mudar123","102030","123","test","q1w2e3r4t5","123456","123321","teste","0147852369","7777","admin","admin123"]:
+        for pwd in ["admin", "admin2","pass","pass123","pass1234","password","password2","password3","102030","root","test","root2","123456","123321","admin1234","admin12345","admin123456","123","admin123"]:
             for target in urls:
 
                 if 'com' not in target:
