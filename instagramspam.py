@@ -149,7 +149,7 @@ if __name__ == "__main__":
     reportedGuy = input(Fore.GREEN + "SPAM'lanacak Kişinin Kullanıcı Adı: " + Style.RESET_ALL)
     reportedGuyID = input(Fore.GREEN + "SPAM'lanacak Kişinin User ID'si: " + Style.RESET_ALL)
     print("")
-    Status("Saldırı başlatılıyor!\n")
+    Status("Saldırı Başlatılıyor!\n")
 
     for user in USERS:
         p = Process(target=DoitAnakin,args=(reportedGuy,reportedGuyID,user.split(" ")[0],user.split(" ")[1],None))
