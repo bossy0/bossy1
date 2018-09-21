@@ -10,7 +10,7 @@ BANNER = """
    dBP   dBBBBBP     dBP      dBP dBP dBP `BBBBb   dBP      dBP BB       `BBBBb  dBBBP'   dBP BB   dB'dB'dB' 
   dBP   dBP dBP     dBP      dBP dBP dBP     dBP  dBP      dBP  BB          dBP dBP      dBP  BB  dB'dB'dB'  
  dBP   dBP dBP     dBP      dBP dBP dBP dBBBBP'  dBP      dBBBBBBB     dBBBBP' dBP      dBBBBBBB dB'dB'dB'   
-    Yapımcı: Hichigo THT
+    Yapımcı : Bossy
 """
 
 USER_AGENTS = ["Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0",
