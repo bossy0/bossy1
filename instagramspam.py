@@ -126,13 +126,13 @@ def DoitAnakin(reportedGuy,reportedGuyID,username,password,proxy):
         insta.Login()
         result = insta.Spam(reportedGuy,reportedGuyID)
         if insta.loggedIn == True and result == True:
-            Success(username,"Başarıyla SPAM atıldı!")
+            Success(username,"Başarıyla SPAM Atıldı !")
         elif insta.loggedIn == True and result == False:
-            Fail(username,"Giriş başarılı ama SPAM atılması başarısız!")
+            Fail(username,"Giriş Başarılı Ama SPAM Atılması Başarısız !")
         elif insta.loggedIn == False:
-            Fail(username,"Giriş başarısız!")
+            Fail(username,"Giriş Başarısız !")
     except:
-        Fail(username,"Giriş yapılırken hata oluştu!")
+        Fail(username,"Giriş Yapılırken Hata Oluştu !")
 
 if __name__ == "__main__":
     init()
@@ -145,9 +145,9 @@ if __name__ == "__main__":
 
 
     print(Fore.RED + BANNER + Style.RESET_ALL)
-    Status(str(len(USERS)) + " Adet Kullanıcı Yüklendi!\n")
-    reportedGuy = input(Fore.GREEN + "SPAM'lanacak Kişinin Kullanıcı Adı: " + Style.RESET_ALL)
-    reportedGuyID = input(Fore.GREEN + "SPAM'lanacak Kişinin User ID'si: " + Style.RESET_ALL)
+    Status(str(len(USERS)) + " Adet Kullanıcı Yüklendi !\n")
+    reportedGuy = input(Fore.GREEN + "SPAM'lanacak Kişinin Kullanıcı Adı : " + Style.RESET_ALL)
+    reportedGuyID = input(Fore.GREEN + "SPAM'lanacak Kişinin User ID'si : " + Style.RESET_ALL)
     print("")
     Status("Saldırı Başlatılıyor!\n")
 
