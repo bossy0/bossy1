@@ -136,7 +136,7 @@ def DoitAnakin(reportedGuy,reportedGuyID,username,password,proxy):
 
 if __name__ == "__main__":
     init()
-    userFile = open("kullanicilar.txt","r")
+    userFile = open("users.txt","r")
 
     USERS = []
     for user in userFile.readlines():
