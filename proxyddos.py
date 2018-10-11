@@ -99,7 +99,6 @@ print (" ")
 
 url = raw_input("\033[93m [+] Hedef : \033[1m")
 in_file = open(raw_input("\033[94m [+] Proxy : \033[1m"),"r")
-port = input("\033[92m [+] Port : \033[1m")
 thread = input("\033[95m [+] Threads : \033[1m")
 print ("\033[0;31m [!] Programı Dudurmak Istıyorsanız CTRL + Z \033[1m")
 host_url = url.replace("http://", "").replace("https://", "").split('/')[0]
