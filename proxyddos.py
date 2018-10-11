@@ -258,15 +258,15 @@ reFerers = [
 def parseFiles():
 	#trying to find and parse file with proxies
 	try:
-		if os.stat(proxy_file).st_size > 0:
-			with open(proxy_file) as proxy:
+		if os.stat(proxy.txt).st_size > 0:
+			with open(proxy.txt) as proxy:
 				global ips
 				ips = [row.rstrip() for row in proxy]
 		else: 
-			print('Error: File %s is empty!' % proxy_file)
+			print('Error: File %s is empty!' % proxy.txt)
 			sys.exit()
 	except OSError:
-		print('Error: %s was not found!' % proxy_file)
+		print('Error: %s was not found!' % proxy.txt)
 		sys.exit()
 	#trying to find and parse file with User-Agents
 	try:
