@@ -254,62 +254,7 @@ reFerers = [
         "https://anonysurfer.com/a2/index.php?q=",
         "http://analiz.web.tr/en/www/",
         "https://plus.google.com/share?url="]
-
-def parseFiles():
-	#trying to find and parse file with proxies
-	try:
-		if os.stat(proxy.txt).st_size > 0:
-			with open(proxy.txt) as proxy:
-				global ips
-				ips = [row.rstrip() for row in proxy]
-		else: 
-			print('Error: File %s is empty!' % proxy.txt)
-			sys.exit()
-	except OSError:
-		print('Error: %s was not found!' % proxy.txt)
-		sys.exit()
-	#trying to find and parse file with User-Agents
-	try:
-		if os.stat(ua_file).st_size > 0:
-			with open(ua_file) as user_agents:
-				global ua
-				ua = [row.rstrip() for row in user_agents]
-		else:
-			print('Error: File %s is empty' % ua_file)
-			sys.exit()
-	except OSError:
-		print('Error: %s was not found!' % ua_file)
-		sys.exit()
-	#trying to find and parse file with referers
-	try:
-		if os.stat(ref_file).st_size > 0:
-			with open(ref_file) as referers:
-				global ref
-				ref = [row.rstrip() for row in referers]
-		else:
-			print('Error: File %s is empty!' % ref_file)
-			sys.exit()
-	except OSError:
-		print('Error: %s was not found!' % ref_file)
-		sys.exit()
-	#trying to find and parse file with keywords
-	try:
-		if os.stat(keywords_file).st_size > 0:
-			with open(keywords_file) as keywords:
-				global keyword
-				keyword = [row.rstrip() for row in keywords]
-		else:
-			print('Error: File %s is empty!' % keywords_file)
-			sys.exit()
-	except OSError:
-		print('Error: %s was not found!' % keywords_file)
-		sys.exit()
-	#parse end
-	# messaging statistics
-	print('Loaded: {} proxies, {} user-agents, {} referers, {} keywords'.format(len(ips), len(ua), len(ref), len(keyword)))
-	cloudFlareCheck()
-	
-
+  			
 def randomIp():
     random.seed()
     result = str(random.randint(1, 254)) + '.' + str(random.randint(1, 254)) + '.'
@@ -380,6 +325,61 @@ in_file.close()
 listaproxy = proxyf.split('\n')
 #So luong
 thread = input("So luong (1000): ") 
+
+def parseFiles():
+	#trying to find and parse file with proxies
+	try:
+		if os.stat(proxy.txt).st_size > 0:
+			with open(proxy.txt) as proxy:
+				global ips
+				ips = [row.rstrip() for row in proxy]
+		else: 
+			print('Error: File %s is empty!' % proxy.txt)
+			sys.exit()
+	except OSError:
+		print('Error: %s was not found!' % proxy.txt)
+		sys.exit()
+	#trying to find and parse file with User-Agents
+	try:
+		if os.stat(ua_file).st_size > 0:
+			with open(ua_file) as user_agents:
+				global ua
+				ua = [row.rstrip() for row in user_agents]
+		else:
+			print('Error: File %s is empty' % ua_file)
+			sys.exit()
+	except OSError:
+		print('Error: %s was not found!' % ua_file)
+		sys.exit()
+	#trying to find and parse file with referers
+	try:
+		if os.stat(ref_file).st_size > 0:
+			with open(ref_file) as referers:
+				global ref
+				ref = [row.rstrip() for row in referers]
+		else:
+			print('Error: File %s is empty!' % ref_file)
+			sys.exit()
+	except OSError:
+		print('Error: %s was not found!' % ref_file)
+		sys.exit()
+	#trying to find and parse file with keywords
+	try:
+		if os.stat(keywords_file).st_size > 0:
+			with open(keywords_file) as keywords:
+				global keyword
+				keyword = [row.rstrip() for row in keywords]
+		else:
+			print('Error: File %s is empty!' % keywords_file)
+			sys.exit()
+	except OSError:
+		print('Error: %s was not found!' % keywords_file)
+		sys.exit()
+	#parse end
+	# messaging statistics
+	print('Loaded: {} proxies, {} user-agents, {} referers, {} keywords'.format(len(ips), len(ua), len(ref), len(keyword)))
+	cloudFlareCheck()
+
 get_host = "GET " + url + " HTTP/1.1\r\nHost: " + host_url + "\r\n"
 accept = "Accept-Encoding: gzip, deflate\r\n"
 connection = "Connection: Keep-Alive, Persist\r\nProxy-Connection: keep-alive\r\n"
