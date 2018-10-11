@@ -29,11 +29,8 @@ userAgents = [
             "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",]
 
 reFerers = [
-            'http://www.google.com/',
-            'http://www.bing.com/',
-            'http://www.baidu.com/',
-            'http://www.yandex.com/',
-            'http://' + self.host + '/'
+            "http://validator.w3.org/check?uri="
+            "http://www.facebook.com/sharer/sharer.php?u="
             ]
   			
 def randomIp():
