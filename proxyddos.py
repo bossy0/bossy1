@@ -33,8 +33,8 @@ reFerers = [
             'http://www.bing.com/',
             'http://www.baidu.com/',
             'http://www.yandex.com/',
-            'http://' + self.host + ',
-            'htts://' + self.host + '	']
+            'http://' + self.host + '/'
+            ]
   			
 def randomIp():
     random.seed()
