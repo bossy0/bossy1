@@ -331,7 +331,7 @@ x = 0
  
 for x in xrange(thread):
     attacco().start()
-print "Ctrl + C de dung tan cong..."
+print ("\033[0;31m [!] Ctrl + C de dung tan cong \033[1m")
 nload = 0
 while not nload:
     time.sleep(1)
