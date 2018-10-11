@@ -317,12 +317,12 @@ print ("\033[33m                     Instagram : @bossy.078 \033[0m")
 print (" ")
 
 url = raw_input("\033[93m [+] Hedef : \033[1m")
-host_url = url.replace("http://", "").replace("https://", "").split('/')[0]
 in_file = open(raw_input("\033[94m [+] Proxy : \033[1m"),"r")
+thread = input("\033[95m Threads : \033[1m")
+host_url = url.replace("http://", "").replace("https://", "").split('/')[0]
 proxyf = in_file.read()
 in_file.close()
 listaproxy = proxyf.split('\n')
-thread = input("\033[95m Threads : \033[1m")
 get_host = "GET " + url + " HTTP/1.1\r\nHost: " + host_url + "\r\n"
 accept = "Accept-Encoding: gzip, deflate\r\n"
 connection = "Connection: Keep-Alive, Persist\r\nProxy-Connection: keep-alive\r\n"
