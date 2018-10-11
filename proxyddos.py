@@ -294,7 +294,7 @@ class attacco(threading.Thread):
         while 1:
             try:
                 a = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                a.connect((proxy[0], int(proxy[1])))
+                a.connect((proxy[0], int(port), int(proxy[1])))
                 a.send(httprequest)
                 try:
                     for i in xrange(3):
