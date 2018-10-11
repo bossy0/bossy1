@@ -29,50 +29,12 @@ userAgents = [
             "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",]
 
 reFerers = [
-        "http://host-tracker.com/check_page/?furl="
-        "http://jigsaw.w3.org/css-validator/validator?uri="
-        "http://www.google.com/translate?u="
-        "http://anonymouse.org/cgi-bin/anon-www.cgi/"
-        "http://www.onlinewebcheck.com/?url="
-        "http://feedvalidator.org/check.cgi?url="
-        "http://www.online-translator.com/url/translation.aspx?direction=er&sourceURL="
-        "http://www.translate.ru/url/translation.aspx?direction=er&sourceURL="
-        "http://validator.w3.org/feed/check.cgi?url="
-        "http://www.pagescoring.com/website-speed-test/?url="
-        "http://check-host.net/check-http?host="
-        "http://checksite.us/?url="
-        "http://jobs.bloomberg.com/search?q="
-        "http://www.bing.com/search?q="
-        "https://www.yandex.com/yandsearch?text="
-        "http://www.google.com/?q="
-        "https://add.my.yahoo.com/rss?url="
-        "http://www.bestbuytheater.com/events/search?q="
-        "http://www.shodanhq.com/search?q="
-        "https://play.google.com/store/search?q="
-        "http://coccoc.com/search#query="
-        "http://www.search.com/search?q="
-        "https://add.my.yahoo.com/rss?url="
-        "https://images2-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url="
-        "https://www.facebook.com/l.php?u=",
-        "https://www.facebook.com/l.php?u=",
-        "https://drive.google.com/viewerng/viewer?url=",
-        "http://www.google.com/translate?u=",
-        "http://downforeveryoneorjustme.com/",
-        "http://www.slickvpn.com/go-dark/browse.php?u=",
-        "https://www.megaproxy.com/go/_mp_framed?",
-        "http://scanurl.net/?u=",
-        "http://www.isup.me/",
-        "http://www.currentlydown.com/",
-        "http://check-host.net/check-ping?host=",
-        "http://check-host.net/check-tcp?host=",
-        "http://check-host.net/check-dns?host=",
-        "http://check-host.net/ip-info?host=",
-        "https://safeweb.norton.com/report/show?url=",
-        "http://www.webproxy.net/view?q=",
-        "http://www.online-translator.com/url/translation.aspx?direction=er&sourceURL=",
-        "https://anonysurfer.com/a2/index.php?q=",
-        "http://analiz.web.tr/en/www/",
-        "https://plus.google.com/share?url="]
+            'http://www.google.com/',
+            'http://www.bing.com/',
+            'http://www.baidu.com/',
+            'http://www.yandex.com/',
+            'http://' + self.host + '/
+            'htts://' + self.host + '/	']
   			
 def randomIp():
     random.seed()
