@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 #coding: utf8
-#Edit and Update by :Tuan_Linh
-#May 10th 2015
  
 import random
 import socket
